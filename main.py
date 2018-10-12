@@ -3,7 +3,7 @@ from web3 import Web3, HTTPProvider
 
 # print usage
 def print_usage():
-    print("\nusage: python main.py contract_address ",
+    print("\nusage: python main.py contract_address",
           "--host https://mainnet.infura.io/<YOUR_API_KEY>\n")
     exit()
 
