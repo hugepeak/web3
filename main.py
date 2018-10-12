@@ -5,9 +5,6 @@ from web3 import Web3, HTTPProvider
 def print_usage():
     print("\nusage: python main.py contract_address ",
           "--host https://mainnet.infura.io/<YOUR_API_KEY>\n")
-    print("example: python main.py 0x85429f986A5cc38F90dE7b4FfA44d570EEf04066",
-          " --host",
-          " https://mainnet.infura.io/v3/837267291180492a812808e7afac8477\n")
     exit()
 
 # check inputs
