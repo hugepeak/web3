@@ -22,7 +22,7 @@ if not web3.isConnected():
 
 # check and read in contract address
 if web3.isAddress(sys.argv[1]):
-    contract_address = sys.argv[1]
+    contract_address = web3.toChecksumAddress(sys.argv[1])
 else:
     print("\nInvalid contract address!")
     print_usage()
@@ -34,7 +34,9 @@ def has_address(address, block_number):
     else:
         return False
 
-# binary search to find the first block that contains the contract
+# binary search to find the first block that contains the contract.
+# if a block contains a contract and the previous block doesn't, then
+# this block is the one that the contract was deployed.
 def binary_search(start, end, address):
     if start > end:
         return -1
