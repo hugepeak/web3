@@ -64,7 +64,7 @@ def main():
        exit()
 
     # get the corresponding block hash
-    if block_number:
+    if block_number > 0:
         block_hash = web3.eth.getBlock(block_number).hash
     else:
         print("Contract not in blockchain!\n")
